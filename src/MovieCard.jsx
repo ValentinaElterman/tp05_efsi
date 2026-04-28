@@ -1,13 +1,17 @@
-function MovieCard({ pelicula, hola }) {
+function MovieCard({ pelicula, onSelect }) {
+
   return (
-    <div onClick={() => hola(pelicula.imdbID)}>
-      <img
-        src={pelicula.Poster !== "N/A" ? pelicula.Poster : ""}
-        //width="100"
-      />
-      <p>{pelicula.Title}</p>
+    <div className="card" onClick={() => onSelect(pelicula.imdbID)}>
+      
+      {pelicula.Poster !== "N/A" ? ( //N/A es cuando la api no tiene foto
+        <img src={pelicula.Poster} alt={pelicula.Title}/>
+      ) : (
+        <div className="no-photo">
+          <p>Foto no disponible</p>
+        </div>
+      )}
+      <h3>{pelicula.Title}</h3>
       <p>{pelicula.Year}</p>
-      <p>{pelicula.Type}</p>
     </div>
   );
 }

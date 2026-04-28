@@ -3,15 +3,15 @@ import React, {useState,useEffect} from "react";
 function SearchBar({ onSearch }) {
   const [texto, setTexto] = useState("");
 
-  const envio = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (texto.trim()) {
-      onBuscar(texto);
+      onSearch(texto);
     }
   };
 
   return (
-    <form onSubmit={envio}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Buscar película..."

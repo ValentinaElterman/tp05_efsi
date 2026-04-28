@@ -1,13 +1,16 @@
-function MovieDetail({ pelicula, hola }) {
+function MovieDetail({ pelicula, onBack }) {
   return (
-    <div>
+    <div className="detail-container">
+      <div className="detail-image">
+        {pelicula.Poster !== "N/A" ? (
+           <img src={pelicula.Poster} alt={pelicula.Title} />
+        ) : (
+           <div className="no-photo"><p>Sin imagen</p></div>
+        )}
+      </div>
+      
+      <div className="detail-info">
       <h2>{pelicula.Title}</h2>
-
-      <img
-        src={pelicula.Poster !== "N/A" ? pelicula.Poster : ""}
-        //width="200"
-      />
-
       <p><strong>Año:</strong> {pelicula.Year}</p>
       <p><strong>Género:</strong> {pelicula.Genre}</p>
       <p><strong>Director:</strong> {pelicula.Director}</p>
@@ -17,8 +20,9 @@ function MovieDetail({ pelicula, hola }) {
       <p><strong>Idioma:</strong> {pelicula.Language}</p>
       <p><strong>País:</strong> {pelicula.Country}</p>
       <p><strong>IMDb:</strong> {pelicula.imdbRating}</p>
-
-      <button onClick={hola}>Volver</button>
+      
+      <button onClick={onBack}>Volver</button>
+      </div>
     </div>
   );
 }
