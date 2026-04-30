@@ -1,5 +1,3 @@
-function Loader() {
-  return <p>Cargando...</p>;
-}
+const Loader = () => <p>Cargando...</p>;
 
 export default Loader;

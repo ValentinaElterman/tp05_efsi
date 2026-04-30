@@ -1,5 +1,3 @@
-function ErrorMessage({ mensaje }) {
-  return <p>{mensaje}</p>;
-}
+const ErrorMessage = ({ mensaje }) => <p>{mensaje}</p>;
 
 export default ErrorMessage;

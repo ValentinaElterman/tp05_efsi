@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard";
 
-function MoviesList({ movies, onSelectMovie }) {
+function MoviesList({ movies, onSelectMovie, setLoading, onError }) {
   if (!movies || movies.length === 0) return null;
 
   return (
@@ -10,6 +10,8 @@ function MoviesList({ movies, onSelectMovie }) {
           key={movie.imdbID} 
           pelicula={movie} 
           onSelect={onSelectMovie} 
+          setLoading={setLoading}
+          onError={onError}
         />
       ))}
     </div>
