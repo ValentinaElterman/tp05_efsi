@@ -27,6 +27,7 @@ function MovieCard({ pelicula, onSelect, setLoading, onError }) {
       )}
       <h3>{pelicula.Title}</h3>
       <p>{pelicula.Year}</p>
+      <p>{pelicula.Type}</p>
     </div>
   );
 }

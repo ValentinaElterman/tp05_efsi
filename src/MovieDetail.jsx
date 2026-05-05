@@ -11,14 +11,15 @@ function MovieDetail({ pelicula, onBack }) {
       
       <div className="detail-info">
       <h2>{pelicula.Title}</h2>
+      <p><strong>Tipo:</strong> {pelicula.Type}</p>
       <p><strong>Año:</strong> {pelicula.Year}</p>
-      <p><strong>Género:</strong> {pelicula.Genre}</p>
+      <p><strong>Genero:</strong> {pelicula.Genre}</p>
       <p><strong>Director:</strong> {pelicula.Director}</p>
       <p><strong>Actores:</strong> {pelicula.Actors}</p>
       <p><strong>Sinopsis:</strong> {pelicula.Plot}</p>
-      <p><strong>Duración:</strong> {pelicula.Runtime}</p>
+      <p><strong>Duracion:</strong> {pelicula.Runtime}</p>
       <p><strong>Idioma:</strong> {pelicula.Language}</p>
-      <p><strong>País:</strong> {pelicula.Country}</p>
+      <p><strong>Pais:</strong> {pelicula.Country}</p>
       <p><strong>IMDb:</strong> {pelicula.imdbRating}</p>
       
       <button onClick={onBack}>Volver</button>
